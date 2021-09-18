@@ -45,7 +45,7 @@ int main()
     p2.getdata1(1, 4);
     p1.displaydata();
     p2.displaydata();
-    p3. distance( x1,  y1,  x2,  y2); 
+    // p3. distance( x1,  y1,  x2,  y2); 
      
     return 0;
 }

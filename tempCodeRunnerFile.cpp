@@ -1,2 +1,2 @@
 
-};
+    cout<<kamal.id<<endl;
