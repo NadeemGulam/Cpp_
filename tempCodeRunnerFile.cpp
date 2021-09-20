@@ -1,2 +1,1 @@
-
-    cout<<kamal.id<<endl;
+cout<<"The total marks obtained is :  "<<result<<endl;
