@@ -25,16 +25,16 @@ int a,  b, c,  d;
              << "           ( " << x2 << " , " << y2 << " )" << endl;
     }
 
-    double distance(int a, int b, int c, int d );
+    double distance(int x1, int y1, int x2, int y2) ;
      
 };
-   void  point :: distance (int a, int b, int c, int d)
+//    void  point :: distance(int x1, int y1, int x2, int y2)
 
-{
-    int  res;
-    res = sqrt(pow((x2 - x1), 2) + pow((y2 - y1), 2));
-    cout<< res; 
-}
+// {
+//     int  res;
+//     res = sqrt(pow((x2 - x1), 2) + pow((y2 - y1), 2));
+//     cout<< res; 
+// }
 
 
 int main()
