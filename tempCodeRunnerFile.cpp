@@ -1,1 +1,2 @@
-cout<<"The total marks obtained is :  "<<result<<endl;
+
+        a[j+1] = a[j];
