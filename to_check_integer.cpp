@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
-int main(){
+int main()
+{
     int a , b , c ;
     cin>>a;
     if (a>0){
@@ -10,6 +11,6 @@ int main(){
        cout<<"A is negative integer "<<endl;
     }
     else{
-        cout<<"A is zerointeger "<<endl;
+        cout<<"A is zero integer "<<endl;
     }
 }
