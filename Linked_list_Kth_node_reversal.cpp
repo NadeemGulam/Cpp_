@@ -1,5 +1,6 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include<bits/stdc++.h>
+using namespace std ;
+
 
 class node
 {
@@ -34,22 +35,29 @@ void display (node* head ){
     }
     cout<<"NULL";
 }
-void insertAtHead(node* &head , int val ){
-    node * n = new node (val );
-    n -> next = head;
-    head = n;
-}
-bool search ( node* head , int key ){
-    node* temp = head;
-    while (temp != NULL){
-        if (temp -> data == key ){
-            return true;
 
-        }
-        temp = temp ->next;
-    }
-    return false;
+node * reverseK(node* & head, int key){
+        node* prevptr=NULL;
+        node* currptr=head;
+        node* nextptr;
+        int count=0;
+        while (currptr != NULL && count < key)
+{
+        nextptr = currptr->next;
+        currptr->next = prevptr;
+
+        prevptr = currptr;
+        currptr = nextptr ;
+        count ++; 
+
 }
+
+if (nextptr!=NULL){
+    head->next= reverseK(nextptr,key);
+}
+return prevptr;
+}
+
 int main()
 {
     node* head = NULL;
@@ -57,9 +65,15 @@ int main()
     insertaAtTail(head,2);
     insertaAtTail(head,3);
     insertaAtTail(head,4);
-    insertAtHead(head, 0);  // head insertion call
+    insertaAtTail(head,5);
+    insertaAtTail(head,6);
     display (head);
     cout<<endl;
-    cout<<search (head, 4);  // linear search 
+    int key=2;
+    node* newhead = reverseK(head , key);
+    display (newhead);
     return 0;
+
 }
+
+
